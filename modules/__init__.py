@@ -27,7 +27,6 @@ try:
         "SpeakerSeparator",
         "DemucsSFXSeparator",
         "Translator",
-        "ReferenceExtractor",
         "SpeakerDiarization",
     ]
 
