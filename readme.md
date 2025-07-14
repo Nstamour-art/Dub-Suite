@@ -1,4 +1,3 @@
-```markdown
 # Dub-Suite 🎬🎙️
 
 **A comprehensive multilingual dubbing and audio processing toolkit**
@@ -31,6 +30,7 @@ Dub-Suite is an advanced Python-based toolkit designed for automated video dubbi
 -   **Quality Enhancement**: Advanced audio processing and noise reduction
 
 ## Project Structure
+
 ```
 
 Dub-Suite/
@@ -51,14 +51,15 @@ Dub-Suite/
 ├── **main**.py # Main application entry point
 └── requirements.txt # Python dependencies
 
-````
+```
 
 ## Installation
 
 ### Prerequisites
-- Python 3.9-3.12 (Python 3.13+ not fully supported yet)
-- FFmpeg installed and accessible in system PATH
-- CUDA-compatible GPU (optional, for faster processing)
+
+-   Python 3.9-3.12 (Python 3.13+ not fully supported yet)
+-   FFmpeg installed and accessible in system PATH
+-   CUDA-compatible GPU (optional, for faster processing)
 
 ### Setup
 
@@ -176,16 +177,18 @@ Copyright © 2025 Nicolas St-Amour
 This software is released under a custom source-available license. You are free to view, study, and use the source code for personal, non-commercial purposes only.
 
 ### What this means:
-- ✅ You can view and study the source code
-- ✅ You can use it for personal, non-commercial projects
-- ✅ You can report bugs and contribute suggestions
-- ✅ You can fork for personal learning (no redistribution)
-- ❌ You cannot use it commercially without permission
-- ❌ You cannot redistribute modified versions
-- ❌ You cannot create competing products based on this code
-- ❌ You cannot sublicense or sell the software
+
+-   ✅ You can view and study the source code
+-   ✅ You can use it for personal, non-commercial projects
+-   ✅ You can report bugs and contribute suggestions
+-   ✅ You can fork for personal learning (no redistribution)
+-   ❌ You cannot use it commercially without permission
+-   ❌ You cannot redistribute modified versions
+-   ❌ You cannot create competing products based on this code
+-   ❌ You cannot sublicense or sell the software
 
 ### Contributing
+
 We welcome bug reports, feature suggestions, and code contributions through GitHub issues and pull requests. By contributing, you agree that your submissions will be licensed under the same terms as this project.
 
 Full license terms are available in the [LICENSE](LICENSE) file.
@@ -201,5 +204,6 @@ Full license terms are available in the [LICENSE](LICENSE) file.
 
 **Note**: This software is in active development. Features may change, and stability is not guaranteed. Use at your own discretion for production applications.
 
+## Contact
 
-````
+For commercial licensing, custom modifications, or permission to use this software in ways not permitted by this license, please contact: [nstamour.dev@outlook.com](mailto:nstamour.dev@outlook.com)
