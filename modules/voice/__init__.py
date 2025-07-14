@@ -9,7 +9,9 @@ Commercial use requires explicit written permission.
 try:
     from extract_reference import ReferenceExtractor
 
-    __all__ = ["ReferenceExtractor"]
+    __all__ = [
+        "ReferenceExtractor",
+    ]
 
 except ImportError as e:
     print(f"Error importing ReferenceExtractor: {e}")
