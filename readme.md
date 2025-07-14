@@ -46,7 +46,7 @@ Dub-Suite/
 │ │ ├── translate.py # Translation services
 │ │ ├── audio_utils.py # Audio format utilities
 │ │ └── align_speaker_with_transcription.py # Speaker alignment
-│ └── voice_cloner/ # Voice cloning modules
+│ └── voice/ # Voice cloning modules
 │ └── extract_reference.py # Reference audio extraction
 ├── **main**.py # Main application entry point
 └── requirements.txt # Python dependencies
