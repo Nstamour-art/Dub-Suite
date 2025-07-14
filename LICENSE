@@ -1,0 +1,37 @@
+Dub-Suite Source-Available License
+
+Copyright © 2025 Nicolas St-Amour
+
+Permission is hereby granted to view the source code of this software
+("Dub-Suite") for educational and reference purposes only, subject to the
+following conditions:
+
+PERMITTED:
+
+-   View and study the source code
+-   Use the software for personal, non-commercial purposes
+-   Report bugs and security issues
+-   Fork for personal learning (modifications must not be redistributed)
+
+PROHIBITED:
+
+-   Copying, modifying, or distributing the source code for commercial purposes
+-   Creating derivative works for distribution
+-   Commercial use without explicit written permission
+-   Reverse engineering for competitive purposes
+-   Redistribution in any form without permission
+-   Sublicensing or selling the software
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+For commercial licensing, custom modifications, or permission to use this
+software in ways not permitted by this license, contact: nstamour.dev@outlook.com
+
+This license does not grant you any trademark rights, patent rights, or any
+other intellectual property rights in or to the Dub-Suite software.

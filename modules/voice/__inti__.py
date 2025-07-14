@@ -7,11 +7,10 @@ Commercial use requires explicit written permission.
 """
 
 try:
-    from transcribe import Transcriber
-    from diarize_speakers import SpeakerDiarization
+    from extract_reference import ReferenceExtractor
 
-    __all__ = ["Transcriber", "SpeakerDiarization"]
+    __all__ = ["ReferenceExtractor"]
 
 except ImportError as e:
-    print(f"Error importing modules: {e}")
+    print(f"Error importing ReferenceExtractor: {e}")
     __all__ = []

@@ -1,7 +1,15 @@
+"""
+Copyright © 2025 Nicolas St-Amour. All rights reserved.
+Licensed under the Dub-Suite Source-Available License.
+
+This software is source-available for educational and personal use only.
+Commercial use requires explicit written permission.
+"""
+
 try:
     from audio import Transcriber
     from audio import SpeakerDiarization
-    from voice_cloner import ReferenceExtractor
+    from voice import ReferenceExtractor
     from utils import AudioUtils
     from utils import LanguageDetector
     from utils import VideoAudioExtractor

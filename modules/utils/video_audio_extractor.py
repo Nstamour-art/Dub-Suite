@@ -1,6 +1,13 @@
+"""
+Copyright © 2025 Nicolas St-Amour. All rights reserved.
+Licensed under the Dub-Suite Source-Available License.
+
+This software is source-available for educational and personal use only.
+Commercial use requires explicit written permission.
+"""
+
 import os
 import ffmpy
-import wave
 import subprocess
 import json
 
@@ -18,22 +25,30 @@ class VideoAudioExtractor:
 
         # Default audio configuration for speech processing
         # Default audio configuration for high quality extraction (preserves original channels)
-        self.default_audio_config = {
-            "-ar": "48000",  # Sample rate
-            "-f": "wav",  # Format
-            "-acodec": "pcm_s16le",  # Codec
-            "-y": None,  # Overwrite output files without asking
-        }
+        self.default_audio_config = [
+            "-ar",
+            "48000",  # Sample rate
+            "-f",
+            "wav",  # Format
+            "-acodec",
+            "pcm_s16le",  # Codec
+            "-y",  # Overwrite output files without asking
+        ]
 
         # Mono audio configuration optimized for speech processing (Whisper)
-        self.whisper_audio_config = {
-            "-ar": "16000",  # Sample rate (Whisper optimal)
-            "-ac": "1",  # Mono channel
-            "-f": "wav",  # Format
-            "-acodec": "pcm_s16le",  # Codec
-            "-af": "loudnorm=I=-16:TP=-1.5:LRA=7",  # Audio filter for loudness normalization
-            "-y": None,  # Overwrite output files without asking
-        }
+        self.whisper_audio_config = [
+            "-ar",
+            "16000",  # Sample rate (Whisper optimal)
+            "-ac",
+            "1",  # Mono channel
+            "-f",
+            "wav",  # Format
+            "-acodec",
+            "pcm_s16le",  # Codec
+            "-af",
+            "loudnorm=I=-16:TP=-1.5:LRA=7",  # Audio filter for loudness normalization
+            "-y",  # Overwrite output files without asking
+        ]
 
     def extract_audio_HQ(self) -> str:
         """Extracts audio from the video file and saves it as a WAV file.
@@ -73,7 +88,7 @@ class VideoAudioExtractor:
         if not os.path.isfile(self.audio_path):
             raise RuntimeError("Failed to extract audio from video. File not created.")
         return self.audio_path
-    
+
     def get_audio_channels(self) -> float:
         """Gets the number of audio channels in the extracted audio file.
         Returns:
@@ -81,27 +96,30 @@ class VideoAudioExtractor:
         """
 
         try:
-            
+
             # Use ffprobe to get audio channel information
             cmd = [
-            'ffprobe',
-            '-v', 'quiet',
-            '-print_format', 'json',
-            '-show_streams',
-            '-select_streams', 'a:0',
-            self.video_path
+                "ffprobe",
+                "-v",
+                "quiet",
+                "-print_format",
+                "json",
+                "-show_streams",
+                "-select_streams",
+                "a:0",
+                self.video_path,
             ]
-            
+
             result = subprocess.run(cmd, capture_output=True, text=True, check=True)
             probe_data = json.loads(result.stdout)
-            
-            if 'streams' in probe_data and len(probe_data['streams']) > 0:
-            audio_stream = probe_data['streams'][0]
-            num_channels = audio_stream.get('channels', 1)
-            return float(num_channels)
+
+            if "streams" in probe_data and len(probe_data["streams"]) > 0:
+                audio_stream = probe_data["streams"][0]
+                num_channels = audio_stream.get("channels", 1)
+                return float(num_channels)
             else:
-            raise RuntimeError("No audio stream found in video file")
-            
+                raise RuntimeError("No audio stream found in video file")
+
         except subprocess.CalledProcessError as e:
             raise RuntimeError(f"FFprobe error: {e}")
         except json.JSONDecodeError as e:

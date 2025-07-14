@@ -1,3 +1,11 @@
+"""
+Copyright © 2025 Nicolas St-Amour. All rights reserved.
+Licensed under the Dub-Suite Source-Available License.
+
+This software is source-available for educational and personal use only.
+Commercial use requires explicit written permission.
+"""
+
 try:
     from audio_utils import AudioUtils
     from language_detector import LanguageDetector
@@ -19,3 +27,4 @@ try:
 
 except ImportError as e:
     print(f"Error importing modules: {e}")
+    __all__ = []
